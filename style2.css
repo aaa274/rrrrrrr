@@ -1,0 +1,130 @@
+body {
+    /* background: #efefef; */
+    font-family:'DotGothic16',sans-serif;
+
+}
+
+.title{
+    font-size: 400%;
+}
+
+
+.wrap {
+    /* max-width: 1080px; */
+    margin: auto;
+    background: #db5858;
+}
+
+.card {
+    /* max-width: 300px; */
+    flex-basis: 29.33%;
+    margin: 2% 2% 2% 2%;
+    /* 上は、上下左右の余白サイズに関してらしいよ */
+    border: 1px #db5858 solid;
+}
+
+.home{
+    text-align: center;
+}
+
+
+
+.txt {
+    margin: 4% 6%;
+    line-height: 1.3;
+    font-size: 14px;
+}
+
+
+.card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+.fadeIn {
+    text-align: center;
+    padding: 80px 0 40px 0;
+    font-size: 32px;
+    animation-name: fadeInAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+
+    /*== 上に移動し影がついて浮き上がる */
+
+/*ボタンの形状*/
+.float3{
+position:relative;
+top:0;
+padding:0px 0px;
+display: inline-block;
+
+color: rgb(0, 0, 0);
+text-decoration: none;
+outline: none;
+/*アニメーションの設定*/
+transition: all .3s;
+}
+
+
+
+
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+width:260px;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+from {
+opacity: 0;
+transform: translateY(100px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+    
+    @keyframes fadeInAnime{
+      0% {
+        opacity: 0;
+      }
+    
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+@media screen and (max-width:500px) {
+
+    /*　画面サイズが480px以下の場合ここの記述が適用される　*/
+    h1 {
+        color: rgb(255, 255, 255);
+    }
+
+    body {
+        background: yellow;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+
+    .h-large {
+        margin: 40px auto 24px;
+        font-size: 24px;
+    }
+}
